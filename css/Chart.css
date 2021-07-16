@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "ロゴたいぷゴシック";
+    src: url('../fonts/ロゴたいぷゴシック.otf');
+}
+body{
+    font-family: "ロゴたいぷゴシック" ;
+    background-color: #504846;
+}
+#gg {
+	display: none;
+}
+#gg0{
+    font-size: 50px;
+    margin-top:  10px;
+    padding:  10px 45px;
+    border: solid 2px;
+    color: #fff;
+    position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.grass{
+    position: fixed;
+    pointer-events: none;
+    transform: translateY(-49.5%) translateX(-49.3%) scale(1.1);
+}
+.shutterA{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+}
+.end
+{
+    animation: 3s ending forwards;
+}
+.shutterB{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+}
+.frame{
+    position: absolute;
+    transform: translateY(-51%) translateX(-50%);
+    pointer-events: none;
+}
+.photo_base_anim{
+    animation:6s cheki forwards;
+}
+.photo_base{
+    position: absolute;
+    transform: translateY(0) translateX(-50.5%) scaleY(0);  
+}
+.photo_anim{
+    animation:6s image forwards;
+}
+.photo{
+    position: absolute;
+    transform: translateY(95%) translateX(-50.5%); 
+    opacity: 0;
+}
+#camera{
+    position: absolute;
+    transform: translateY(-51.5%) translateX(-50.5%);
+    pointer-events: none;
+}
+#question {
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    font-size: 60px;
+    margin-top:  10px;
+    padding:  20px 30px;
+    border: dotted 2px;
+    transform: translateY(-170%) translateX(-50%);
+}
+.sign{
+    position: absolute;
+    transform: translateY(950%) translateX(-50.5%); 
+    opacity: 0;
+}
+.sign_retry{
+    position: absolute;
+    transform: translateY(435%) translateX(-50.5%) rotate(-10deg); 
+    opacity: 0;
+}
+.sign_anim{
+    animation: 1s sign forwards;
+}
+.btn_yes {
+    position: fixed;
+    font-size: 50px;
+    margin-top:  10px;
+    padding:  10px 45px;
+    border: solid 2px;
+    transform: translate(-150%,0);
+    color: #fff;
+    /* opacity: 0; */
+}
+.btn_no {
+    position: fixed;
+    font-size: 50px;
+    margin-top:  10px;
+    padding:  10px 20px;
+    border: solid 2px;
+    transform: translate(50%,0);
+    color: #fff;
+    /* opacity: 0; */
+}
+
+
+.shutter{
+    transform: translate(-3%,-3%) rotate(-45deg);
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    perspective: 1000;
+}
+.opening{
+    animation:3s openingAnim forwards;
+}
+.img_rotate{
+    animation:1s shutter forwards;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    -webkit-animation:1s shutter forwards;
+}
+.view{
+    position: fixed;
+    transform: translateY(-51.5%) translateX(-50.5%);
+}
+
+.off{
+    display: none;
+}
+#shuA{
+    position: absolute;
+}
+#shuB{
+    position: absolute;
+    transform:rotate(60deg);
+    transform-origin:left top;
+}
+#shuC{
+    position: absolute;
+    transform:rotate(120deg);
+    transform-origin:left top;
+}
+#shuD{
+    position: absolute;
+    transform:rotate(180deg);
+    transform-origin:left top;
+}
+#shuE{
+    position: absolute;
+    transform:rotate(240deg);
+    transform-origin:left top;
+}
+#shuF{
+    position: absolute;
+    transform:rotate(300deg);
+    transform-origin:left top;
+}
+@keyframes openingAnim{
+    40%{
+        transform:rotate(-45deg) translate(-3%,-3%);
+    }
+    50%{
+        transform:rotate(0) translate(-3%,-3%);
+    }
+    90%{
+        transform:rotate(-45deg) translate(-3%,-3%);
+    }
+    95%{
+        transform:rotate(-45deg) translate(-3%,-3%);
+    }
+}
+@keyframes shutter{
+    0%{transform:rotate(-45deg)　translate(-3%,-3%);}
+    10%{transform:rotate(-45deg) translate(-3%,-3%);}
+    55%{transform:rotate(0) translate(-3%,-3%);}
+    65%{transform:rotate(0) translate(-3%,-3%);}
+    85%{transform:rotate(-45deg) translate(-3%,-3%);}
+    90%{transform:rotate(-45deg) translate(-3%,-3%);}
+}
+
+@keyframes cheki{
+    0% { }
+    50%{ transform:scaleY(0) translate(-50.5%, 0
+        );}
+    60% { transform:scaleY(1) translate(-50.5%, 65%);}
+    100% { transform:translate(-50.5%, 65%);}
+}
+@keyframes image{
+    0% {opacity:   0; }
+    75%{opacity: 0; }
+    100% {opacity: 1;}
+}
+@keyframes ending{
+    0%{
+        transform:translate(0, 0);
+    }
+    100%{
+        transform:translate(0, -1850px);
+    }
+}
+@keyframes sign{
+    0%{
+
+    }
+    100%{
+        opacity: 1;
+    }  
+}
